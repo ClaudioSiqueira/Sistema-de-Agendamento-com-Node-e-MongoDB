@@ -11,12 +11,14 @@ app.use(bodyParser.json())
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) =>
-    res.send('Quanto tempo kkk ')
+    res.send('teste')
 )
 
 app.get('/cadastro', (req, res) =>
     res.render('create')
 )
+
+require('./controllers/main')(app)
 
 app.listen(8080, () =>
     console.log('Servidor aberto')

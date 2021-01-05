@@ -9,16 +9,21 @@
 <body>
     <h1>Cadastro</h1>
     <hr>
-    <form action="">
+    <form action="/create" method="POST">
         <input type="text" name="name" id="name" placeholder="Nome do paciente" class="form-control"> 
         <input type="text" name="email" id="email" placeholder="user@email.com" class="form-control"> 
-        <input type="text" name="cpf" id="cpf" placeholder="CPF" class="form-control"> 
+        <input type="text" name="cpf" id="cpf" placeholder="CPF" class="form-control cpf"> 
         <input type="textearea" name="description" id="description" placeholder="Descreva a consulta aqui" class="form-control"> 
         <input type="date" name="date" id="date" placeholder="dd/mm/aa" class="form-control"> 
         <input type="time" name="time" id="time" class="form-control"> 
         <button class="btn btn-success">Agendar</button>
     </form>
 </body>
+<script src="jquery.mask.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+<script>
+    $('.cpf').mask('000.000.000-00');
+</script>
 </html>
